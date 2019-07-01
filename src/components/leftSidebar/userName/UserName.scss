@@ -1,0 +1,9 @@
+@import '../../../assets/scss/variables';
+
+.userName {
+  font-size: $user-name-size;
+  color: $user-name-color;
+  font-family: $user-name-ff;
+  padding: 4px 8px;
+  background-color: $user-name-bg;
+}

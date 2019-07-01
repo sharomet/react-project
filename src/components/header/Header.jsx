@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import './Header.scss'
 
-import TopNav from '../navbar/TopNav'
+import PrimaryNavbar from '../navbar/PrimaryNavbar'
 
 export default class Header extends Component {
     render() {
         return (
             <header className='header'>
-                <TopNav/>
+                <PrimaryNavbar/>
             </header>
         )
     }

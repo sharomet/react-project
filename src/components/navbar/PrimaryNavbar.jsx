@@ -1,11 +1,11 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 
-import {Navbar, Nav, NavDropdown, Container} from 'react-bootstrap';
+import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
 
-export default class TopNav extends Component {
+export default class PrimaryNavbar extends Component {
     render() {
         return (
-            <Navbar bg="light" expand="lg">
+            <Navbar bg="primary" variant="dark" expand="lg">
                 <Container>
                     <Navbar.Brand href="#home">React</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav"/>
