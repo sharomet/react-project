@@ -7,9 +7,6 @@ var mongoose_1 = __importDefault(require("mongoose"));
 var Schema = mongoose_1.default.Schema;
 ;
 exports.UserSchema = new Schema({
-    _id: {
-        type: String
-    },
     name: {
         type: String,
         required: 'Enter a name'
