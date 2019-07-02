@@ -2,4 +2,9 @@
 
 .leftSidebar {
   background-color: $lefSidebar-bg;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: 40px;
+  width: 250px;
 }

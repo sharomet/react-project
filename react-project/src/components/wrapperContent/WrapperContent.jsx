@@ -1,18 +1,16 @@
 import React, { Component } from 'react'
 
-import './Content.scss'
+import './WrapperContent.scss'
 
 import LeftSidebar from '../leftSidebar/LeftSidebar'
-import RightSidebar from '../rightSidebar/RightSidebar'
 import Main from '../main/Main'
 
-export default class Content extends Component {
+export default class WrapperContent extends Component {
     render() {
         return (
-            <div className="container content">
+            <div className="wrapper-content">
                 <LeftSidebar/>
                 <Main/>
-                <RightSidebar/>
             </div>
         )
     }

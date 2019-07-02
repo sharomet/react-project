@@ -1,14 +1,14 @@
 import React from 'react';
 import './assets/scss/app.scss';
 
-import Header from './components/header/Header'
-import Content from './components/content/Content'
+import PrimaryNav from './components/primaryNav/PrimaryNav'
+import WrapperContent from './components/wrapperContent/WrapperContent'
 
 function App() {
     return (
         <div className="App">
-            <Header/>
-            <Content/>
+            <PrimaryNav/>
+            <WrapperContent/>
         </div>
     );
 }

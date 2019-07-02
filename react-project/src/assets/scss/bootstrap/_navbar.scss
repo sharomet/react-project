@@ -5,26 +5,26 @@
 // Navbar nav
 // Navbar text
 // Navbar divider
-// Responsive navbar
+// Responsive primaryNav
 // Navbar position
 // Navbar themes
 
 
 // Navbar
 //
-// Provide a static navbar from which we expand to create full-width, fixed, and
-// other navbar variations.
+// Provide a static primaryNav from which we expand to create full-width, fixed, and
+// other primaryNav variations.
 
 .navbar {
   position: relative;
   display: flex;
-  flex-wrap: wrap; // allow us to do the line break for collapsing content
+  flex-wrap: wrap; // allow us to do the line break for collapsing wrapperContent
   align-items: center;
   justify-content: space-between; // space out brand from logo
   padding: $navbar-padding-y $navbar-padding-x;
 
   // Because flex properties aren't inherited, we need to redeclare these first
-  // few properties so that content nested within behave properly.
+  // few properties so that wrapperContent nested within behave properly.
   > .container,
   > .container-fluid {
     display: flex;
@@ -56,11 +56,11 @@
 
 // Navbar nav
 //
-// Custom navbar navigation (doesn't require `.nav`, but does make use of `.nav-link`).
+// Custom primaryNav navigation (doesn't require `.nav`, but does make use of `.nav-link`).
 
 .navbar-nav {
   display: flex;
-  flex-direction: column; // cannot use `inherit` to get the `.navbar`s value
+  flex-direction: column; // cannot use `inherit` to get the `.primaryNav`s value
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
@@ -88,23 +88,23 @@
 }
 
 
-// Responsive navbar
+// Responsive primaryNav
 //
-// Custom styles for responsive collapsing and toggling of navbar contents.
+// Custom styles for responsive collapsing and toggling of primaryNav contents.
 // Powered by the collapse Bootstrap JavaScript plugin.
 
-// When collapsed, prevent the toggleable navbar contents from appearing in
+// When collapsed, prevent the toggleable primaryNav contents from appearing in
 // the default flexbox row orientation. Requires the use of `flex-wrap: wrap`
-// on the `.navbar` parent.
+// on the `.primaryNav` parent.
 .navbar-collapse {
   flex-basis: 100%;
   flex-grow: 1;
-  // For always expanded or extra full navbars, ensure content aligns itself
+  // For always expanded or extra full navbars, ensure wrapperContent aligns itself
   // properly vertically. Can be easily overridden with flex utilities.
   align-items: center;
 }
 
-// Button for toggling the navbar when in its collapsed state
+// Button for toggling the primaryNav when in its collapsed state
 .navbar-toggler {
   padding: $navbar-toggler-padding-y $navbar-toggler-padding-x;
   @include font-size($navbar-toggler-font-size);
@@ -130,8 +130,8 @@
   background-size: 100% 100%;
 }
 
-// Generate series of `.navbar-expand-*` responsive classes for configuring
-// where your navbar collapses.
+// Generate series of `.primaryNav-expand-*` responsive classes for configuring
+// where your primaryNav collapses.
 .navbar-expand {
   @each $breakpoint in map-keys($grid-breakpoints) {
     $next: breakpoint-next($breakpoint, $grid-breakpoints);
