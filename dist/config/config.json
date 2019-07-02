@@ -1,0 +1,10 @@
+{
+    "serverPort": "3100",
+    "pathToClient": "../react-project/build/",
+    "apiUrl": "/api",
+    "db": {
+        "name": "fastify",
+        "host": "localhost",
+        "port": 27017
+    }
+}
