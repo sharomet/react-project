@@ -1,12 +1,7 @@
 import React, { Component } from 'react'
 
 import './Main.scss'
-
-const USERS = [
-    { id: 1, name: 'Alex'},
-    { id: 2, name: 'Victor'},
-    { id: 3, name: 'Smith'},
-];
+import User from "../../containers/users/Users";
 
 export default class Main extends Component {
 
@@ -17,14 +12,11 @@ export default class Main extends Component {
     render() {
 
         const { test } = this.state;
-        const userList = USERS;
 
         return (
             <main className="main">
                 { test }
-                <ul>
-                    { userList.map(({ id, name }) => <li key={id}>{ name }</li> ) }
-                </ul>
+                <User/>
             </main>
         )
     }
