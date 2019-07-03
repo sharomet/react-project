@@ -1,0 +1,16 @@
+@import '../../../assets/scss/variables';
+
+.sidebar-nav {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  a {
+    color: $leftSidebar-menu-color;
+    display: block;
+    padding: 7px 12px;
+    &:hover {
+      color: $leftSidebar-menu-color-hvr;
+      background-color: $leftSidebar-menu-bg-color-hvr;
+    }
+  }
+}
