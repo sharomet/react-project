@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 
-import { addUser } from '../../actions/actionUser';
+import { addUser, removeUser } from '../../actions/actionUser';
 
 class Users extends Component {
 
@@ -16,7 +16,10 @@ class Users extends Component {
         })
     };
 
-    addUser = ({ key }) => {
+    addUser = (event) => {
+
+        event.preventDefault();
+
         const { name } = this.state;
 
         if (name.length > 3) {
@@ -31,19 +34,27 @@ class Users extends Component {
 
     render() {
         const { name } = this.state;
-        const { users } = this.props;
+        const { users, removeUser } = this.props;
 
         return (
             <div>
-                <input
-                    type="text"
-                    onChange={this.handleInputChange}
-                    value={ name }
-                />
-                <button type="button" onClick={ this.addUser }>Add</button>
+                <form onSubmit={ this.addUser }>
+                    <div className="form-group">
+                    <input
+                        type="text"
+                        className="form-control"
+                        onChange={ this.handleInputChange }
+                        value={ name }
+                        placeholder="User Name"
+                    />
+                    </div>
+                    <div className="form-group">
+                        <button type="submit" className="btn btn-primary">Add</button>
+                    </div>
+                </form>
                 <ul>
                     {users.map(({ _id, name, email }) => {
-                        return <li key={_id}>{name + ' - ' + email}</li>
+                        return <li key={_id}>{ name + ' - ' + email } <button onClick={() => removeUser(_id)}>X</button></li>
                     })}
                 </ul>
             </div>
@@ -53,4 +64,4 @@ class Users extends Component {
 
 export default connect(state => ({
     users: state.users,
-}), { addUser })(Users);
+}), { addUser, removeUser })(Users);
