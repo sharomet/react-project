@@ -6,7 +6,5 @@ export const addUser = (_id, name, email, password, role, create_at, update_at) 
     name,
     email,
     password,
-    role,
-    create_at,
-    update_at
+    role
 });

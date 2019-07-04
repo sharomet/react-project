@@ -10,12 +10,9 @@ export default class Main extends Component {
     };
 
     render() {
-
-        const { test } = this.state;
-
         return (
             <main className="main">
-                { test }
+
                 <User/>
             </main>
         )
