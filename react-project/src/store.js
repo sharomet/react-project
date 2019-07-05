@@ -1,4 +1,4 @@
-import { createStore, compose } from 'redux';
+import { createStore, compose, applyMiddleware } from 'redux';
 import rootReducer from './reducers/index';
 
 /* eslint-disable no-underscore-dangle */

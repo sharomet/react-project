@@ -1,15 +1,22 @@
-import { ADD_USER, REMOVE_USER } from '../constants';
+import { USERS_FETCH_DATA } from '../constants';
 
-export const addUser = (_id, name, email, password, role, create_at, update_at) => ({
-    type: ADD_USER,
-    _id,
-    name,
-    email,
-    password,
-    role
-});
+export const usersFetchDataSuccess = (users) => {
+    return {
+        type: USERS_FETCH_DATA,
+        users
+    }
+};
 
-export const removeUser = (_id) => ({
-    type: REMOVE_USER,
-    _id
-});
+export const usersFetchData = (url) => {
+    return (dispatch) => {
+        fetch(url)
+            .then(response => {
+                if(!response.ok) {
+                    throw new Error(response.statusText);
+                }
+                return response;
+            })
+            .then(response => response.json())
+            .then(users => dispatch(usersFetchDataSuccess(users)))
+    }
+};

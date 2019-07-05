@@ -4,15 +4,9 @@ import './Main.scss'
 import User from "../../containers/users/Users";
 
 export default class Main extends Component {
-
-    state = {
-        test: 'Hello'
-    };
-
     render() {
         return (
             <main className="main">
-
                 <User/>
             </main>
         )
