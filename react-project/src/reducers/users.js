@@ -1,4 +1,4 @@
-import { USERS_FETCH_DATA } from '../constants';
+import { USERS_FETCH_DATA, USER_FETCH_DATA } from '../constants';
 
 const users = (state = [], action) => {
     switch (action.type) {

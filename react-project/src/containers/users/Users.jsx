@@ -17,9 +17,11 @@ class Users extends Component {
             <div>
                 <ul>
                     {users.map(({ _id, name }) => {
-                        return <li key={_id}>
-                            { name }
-                        </li>
+                        return (
+                            <li key={_id}>
+                                { name }
+                            </li>
+                        )
                     })}
                 </ul>
             </div>
